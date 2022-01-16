@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "./login.css";
-
-function Login() {
+interface LoginProp {
+  change: () => void;
+}
+function Login({ change }: LoginProp) {
   return (
     <div className="login">
       <Form
@@ -42,6 +44,7 @@ function Login() {
 
         <Form.Item>
           <Button
+            onClick={() => change()}
             block
             type="primary"
             htmlType="submit"
