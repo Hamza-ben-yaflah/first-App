@@ -1,11 +1,8 @@
-import React, { useState } from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import "./login.css";
-interface LoginProp {
-  change: () => void;
-}
+
 function Login() {
   return (
     <div className="login">
@@ -38,7 +35,7 @@ function Login() {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
 
-          <a className="login-form-forgot" href="">
+          <a className="login-form-forgot" href="##">
             Forgot password
           </a>
         </Form.Item>
@@ -55,7 +52,7 @@ function Login() {
               Log in
             </Button>
           </Link>
-          Or <a href="">register now!</a>
+          Or <a href="##">register now!</a>
         </Form.Item>
       </Form>
     </div>
