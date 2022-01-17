@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table, Layout, Button } from "antd";
+import Popup from "./Popup";
 
 const columns = [
   {
@@ -54,15 +55,22 @@ const data: DataType[] = [
   },
 ];
 const { Header } = Layout;
+
 function ProductPage() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="container">
       <Header className="header">
-        <Button type="primary" className="btn">
+        <Button type="primary" className="btn" onClick={togglePopup}>
           + New Product
         </Button>
       </Header>
       <Table columns={columns} dataSource={data} />
+      {isOpen && <Popup handleClose={togglePopup} />}
     </div>
   );
 }
