@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import "./login.css";
 interface LoginProp {
   change: () => void;
 }
-function Login({ change }: LoginProp) {
+function Login() {
   return (
     <div className="login">
       <Form
@@ -43,15 +44,17 @@ function Login({ change }: LoginProp) {
         </Form.Item>
 
         <Form.Item>
-          <Button
-            onClick={() => change()}
-            block
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-          >
-            Log in
-          </Button>
+          <Link to="/HomePage">
+            <Button
+              //onClick={() => change()}
+              block
+              type="primary"
+              htmlType="submit"
+              className="login-form-button"
+            >
+              Log in
+            </Button>
+          </Link>
           Or <a href="">register now!</a>
         </Form.Item>
       </Form>
