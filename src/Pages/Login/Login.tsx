@@ -43,7 +43,6 @@ function Login() {
         <Form.Item>
           <Link to="/HomePage">
             <Button
-              //onClick={() => change()}
               block
               type="primary"
               htmlType="submit"
