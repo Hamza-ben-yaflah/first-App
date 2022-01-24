@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Table, Layout, Button, Space } from "antd";
-import Popup from "./Popup";
+import Popup from "../Popup/Popup";
 
 export interface DataType {
   key: number;
@@ -81,7 +81,6 @@ function ProductPage() {
     setIsOpen(!isOpen);
     setProductToEdit(undefined);
   };
-  console.log(products);
 
   return (
     <div className="container">

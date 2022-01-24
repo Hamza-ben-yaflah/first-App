@@ -1,4 +1,3 @@
-import React from "react";
 import Login from "./Pages/Login/Login";
 import "antd/dist/antd.css";
 import "./App.css";

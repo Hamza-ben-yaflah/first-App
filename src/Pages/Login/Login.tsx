@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import "./login.css";
 
 function Login() {
@@ -35,21 +35,23 @@ function Login() {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
 
-          <a className="login-form-forgot" href="">
+          <a className="login-form-forgot" href="##">
             Forgot password
           </a>
         </Form.Item>
 
         <Form.Item>
-          <Button
-            block
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-          >
-            Log in
-          </Button>
-          Or <a href="">register now!</a>
+          <Link to="/HomePage">
+            <Button
+              block
+              type="primary"
+              htmlType="submit"
+              className="login-form-button"
+            >
+              Log in
+            </Button>
+          </Link>
+          Or <a href="##">register now!</a>
         </Form.Item>
       </Form>
     </div>
