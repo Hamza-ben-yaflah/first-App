@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Input, InputNumber, Button } from "antd";
 import "./Popup.css";
-import { DataType } from "./ProductPage";
+import { DataType } from "../ProductPage/ProductPage";
 import form from "antd/lib/form";
 interface PopupProp {
   handleClose: () => void;
@@ -9,7 +9,7 @@ interface PopupProp {
   product: DataType | undefined;
 }
 
-function Popup({ handleClose, handleSubmit, product }: PopupProp) {
+function PopupProduct({ handleClose, handleSubmit, product }: PopupProp) {
   const [form] = Form.useForm();
 
   const onSubmit = (values: DataType) => {
@@ -53,4 +53,4 @@ function Popup({ handleClose, handleSubmit, product }: PopupProp) {
   );
 }
 
-export default Popup;
+export default PopupProduct;

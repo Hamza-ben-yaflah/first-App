@@ -10,7 +10,9 @@ function Home() {
   return (
     <Layout className="layout">
       <Header className="header">
-        <Button type="link">Home</Button>
+        <Link to="/Users">
+          <Button type="link">Users</Button>
+        </Link>
         <Link to="/Product">
           <Button type="link">Product</Button>
         </Link>

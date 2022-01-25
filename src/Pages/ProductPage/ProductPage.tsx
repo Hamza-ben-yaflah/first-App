@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Table, Layout, Button, Space } from "antd";
-import Popup from "./Popup";
+import PopupProduct from "../Popup/PopupProduct";
 
 export interface DataType {
   key: number;
@@ -91,7 +91,7 @@ function ProductPage() {
       </Header>
       <Table columns={columns} dataSource={products} />
       {isOpen && (
-        <Popup
+        <PopupProduct
           handleClose={togglePopup}
           handleSubmit={addProduct}
           product={productToEdit}
